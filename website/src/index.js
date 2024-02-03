@@ -10,6 +10,7 @@ import {
 import Scenario1 from "./pages/scenario1/Scenario1";
 import Scenario2 from "./pages/scenario2/Scenario2";
 import Scenario3 from "./pages/scenario3/Scenario3";
+import Scenario4 from "./pages/scenario4/Scenario4";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/scenario3",
     element: <Scenario3 />
+  },
+  {
+    path: "/scenario4",
+    element: <Scenario4 />
   }
 ]);
 

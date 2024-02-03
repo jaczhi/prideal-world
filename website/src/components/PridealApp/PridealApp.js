@@ -36,7 +36,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
     if (gameData[gameState].type === "dialog") {
       setShowOverlay(false);
       setDialog(
-        `${gameData[gameState].actor} says: ${gameData[gameState].dialog}`
+        `${gameData[gameState].actor}: ${gameData[gameState].dialog}`
       );
     } else if (gameData[gameState].type === "interact") {
       setShowOverlay(true);

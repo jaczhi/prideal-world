@@ -14,6 +14,8 @@ function App() {
       <br />
       <Button onClick={() => {navigate("/scenario3")}}>Scenario 3</Button>
       <br />
+      <Button onClick={() => {navigate("/scenario4")}}>Scenario 4</Button>
+      <br />
     </>
   );
 }
