@@ -1,13 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useNavigate } from "react-router-dom";
+import {Button} from 'react-bootstrap';
+
 
 function App() {
-
+  const navigate = useNavigate();
 
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <>
+      <Button onClick={() => {navigate("/scenario1")}}>Scenario 1</Button>
+      <br />
+      <Button onClick={() => {navigate("/scenario2")}}>Scenario 2</Button>
+      <br />
+      <Button onClick={() => {navigate("/scenario3")}}>Scenario 3</Button>
+      <br />
+    </>
   );
 }
 
