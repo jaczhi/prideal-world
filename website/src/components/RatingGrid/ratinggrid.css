@@ -17,17 +17,22 @@
 }
 
 .rating-button-group {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .rating-button {
     width: 75px;
     height: 75px;
-    border-radius: 5px;
+    border-radius: 7px;
     background-color: #F0E6EF;
     border-width: 0px;
+    transition: transform .2s ease-in-out;
+}
+
+.rating-button:hover {
+    transform: scale(1.1);
 }
 
 .rating-button:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 7px;
 }
