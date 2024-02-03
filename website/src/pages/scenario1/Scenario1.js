@@ -11,7 +11,7 @@ function Scenario1() {
   const [show, setShow] = useState(false);
   const [rating, setRating] = useState(-1);
   const [currentText, setCurrentText] = useState(
-    "Hello hello hello"
+    "Please rate the below dialogue snippet on [person]'s intention and the effect on [person]."
   );
 
   const handleClose = () => setShow(false);
