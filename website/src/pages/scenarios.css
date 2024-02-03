@@ -32,11 +32,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    background-color: red;
+    padding: 2rem 0rem 0rem;
 }
 
 .llm-text-input {
-    width: 500px;
-    height: 235px;
+    width: 350px;
+    height: 175px;
 }
 
 .llm-text-submit {
