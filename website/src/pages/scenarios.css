@@ -12,6 +12,15 @@
     height: 100vh;
 }
 
+.dialogue {
+    padding: 1rem;
+    margin: auto;
+    background-color: #9C89B8;
+    width: fit-content;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
 .topcanvas {
     width: 100%;
     margin: 0;

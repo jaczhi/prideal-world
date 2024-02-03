@@ -56,6 +56,10 @@ function Scenario1() {
     return (
         <div className="App">
             <div className="overlay">
+                <div className="dialogue">
+                    Please rate the below dialogue snippet on [person]'s intention and the effect on [person].
+                </div>
+
                 <div className="rating-grid">
                     <RatingGrid onRating={onRating}/>
                 </div>
