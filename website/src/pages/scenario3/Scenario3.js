@@ -1,4 +1,4 @@
-import ThreeCube from "../../components/ThreeCube";
+import ThreeCube from "../../components/ThreeCube/ThreeCube";
 import { Button, Modal } from "react-bootstrap";
 import { useState } from "react";
 import "../scenarios.css";
@@ -12,10 +12,6 @@ function Scenario3() {
     return (
         <div className="App">
         <div className="overlay">
-            <Button variant="primary" className="testButton" onClick={handleShow}>
-            Scenario 3
-            </Button>
-            <div className="testButton">Test Test test</div>
         </div>
 
         <Modal show={show} onHide={handleClose}>

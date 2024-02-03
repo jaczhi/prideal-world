@@ -7,10 +7,9 @@
 .overlay {
     user-select: none;
     position: absolute;
-    right: 5vw;
-    width: 30vw;
-    font-family:'Courier New', Courier, monospace;
     z-index: 10;
+    width: 100vw;
+    height: 100vh;
 }
 
 .topcanvas {
@@ -18,4 +17,10 @@
     margin: 0;
     -webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
     mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
+}
+
+.rating-grid {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
 }

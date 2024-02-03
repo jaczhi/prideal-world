@@ -1,0 +1,14 @@
+.rating-grid-container {
+
+}
+
+.rating-button-group {
+    margin-bottom: 5px;
+}
+
+.rating-button {
+    width: 75px;
+    height: 75px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
