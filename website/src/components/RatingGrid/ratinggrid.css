@@ -1,5 +1,7 @@
 .rating-grid-container {
-
+    background-color: #9C89B8;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
 .rating-button-group {
@@ -9,6 +11,11 @@
 .rating-button {
     width: 75px;
     height: 75px;
-    margin-right: 5px;
     border-radius: 5px;
+    background-color: #F0E6EF;
+    border-width: 0px;
+}
+
+.rating-button:not(:last-child) {
+    margin-right: 5px;
 }
