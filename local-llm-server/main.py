@@ -1,9 +1,11 @@
 from flask import Flask, request
+from flask_cors import CORS
 import subprocess
 
 app = Flask(__name__)
+CORS(app)
 
-@app.route('/prompt')
+@app.route('/prompt', methods=['POST'])
 def prompt():
     try:
         # Retrieve the input string from the request body
@@ -15,7 +17,7 @@ def prompt():
         
         # Run the 'uname' command and capture the output
         result = subprocess.check_output(['ollama', 'run', 'llama2', f'"{input_string}"']).decode('utf-8').strip()
-        return f"{result}"
+        return f'{result}'
     except Exception as e:
         return f"Error: {str(e)}"
 
