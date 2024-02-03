@@ -1,6 +1,6 @@
 import ThreeCube from "../../components/ThreeCube/ThreeCube";
 import { Button, Modal } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../scenarios.css";
 import RatingGrid from "../../components/RatingGrid/RatingGrid";
 
@@ -9,6 +9,18 @@ function Scenario1() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:5000/prompt", {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({"input": "Capital of Germany?"}),
+      })
+          .then((res) => res.text())
+          .then((data) => console.log(data)); // The capital of Germany is Berlin.
+      }, []);
 
     const onRating = (rating) => {
         switch (rating) {
@@ -47,6 +59,11 @@ function Scenario1() {
             <div className="overlay">
                 <div className="rating-grid">
                     <RatingGrid onRating={onRating}/>
+                </div>
+
+                <div className="llm-text-container">
+                    <textarea className="llm-text-input" type="text"></textarea>
+                    <button className="llm-text-submit">Submit</button>
                 </div>
             </div>
 

@@ -24,3 +24,23 @@
     bottom: 25px;
     left: 25px;
 }
+
+.llm-text-container {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.llm-text-input {
+    width: 500px;
+    height: 235px;
+}
+
+.llm-text-submit {
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+}
