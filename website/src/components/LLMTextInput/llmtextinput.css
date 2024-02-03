@@ -1,0 +1,29 @@
+.llm-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFC3E6;
+    border-radius: 15px;
+    padding-right: 15px;
+    gap: 5px;
+}
+
+.llm-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.llm-text-input {
+    padding: 1rem;
+    width: 350px;
+    height: 90px;
+    background-color: #EFC3E6;
+    border-width: 0px; 
+    border-radius: 15px;
+}
+
+.llm-text-submit {
+    cursor: pointer;
+    margin-left: 5px;
+}

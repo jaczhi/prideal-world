@@ -1,103 +1,93 @@
 import ThreeCube from "../../components/ThreeCube/ThreeCube";
+import { motion } from "framer-motion";
 import { Button, Modal } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../scenarios.css";
 import RatingGrid from "../../components/RatingGrid/RatingGrid";
+import LLMTextInput from "../../components/LLMTextInput/LLMTextInput";
+import Typewriter from "../../components/Typewriter/Typewriter";
 
 function Scenario1() {
-    const [show, setShow] = useState(false);
-    const [llmText, setLlmText] = useState("");
-    const [rating, setRating] = useState("");
+  const [show, setShow] = useState(false);
+  const [rating, setRating] = useState(-1);
+  const [currentText, setCurrentText] = useState(
+    "Please rate the below dialogue snippet on [person]'s intention and the effect on [person]."
+  );
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
 
-    const onRating = (rating) => {
-        switch (rating) {
-            case 0:
-                console.log("Good Good");
-                setRating("Good Good");
-                break;
-            case 1:
-                console.log("Good Neutral");
-                setRating("Good Neutral");
-                break; 
-            case 2:
-                console.log("Good Bad");
-                setRating("Good Bad");
-                break;
-            case 3:
-                console.log("Neutral Good");
-                setRating("Neutral Good");
-                break;
-            case 4:
-                console.log("Neutral Neutral");
-                setRating("Neutral Neutral");
-                break; 
-            case 5:
-                console.log("Neutral Bad");
-                setRating("Neutral Bad");
-                break;
-            case 6:
-                console.log("Bad Good");
-                setRating("Bad Good");
-                break;
-            case 7:
-                console.log("Bad Neutral");
-                setRating("Bad Neutral");
-                break; 
-            case 8:
-                console.log("Bad Bad");
-                setRating("Good Bad");
-                break;
-        }
-    }
+  const onRating = (score) => {
+    setRating(score);
+  };
 
-    const onTextSubmit = () => {
-        console.log(llmText);
+  const onTextGeneration = (text) => {
+    setCurrentText(text);
+  };
 
-        fetch("http://127.0.0.1:5000/prompt", {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({"input": llmText}),
-        })
-        .then((res) => res.text())
-        .then((data) => console.log(data)); // The capital of Germany is Berlin.
-    }
-
-    return (
-        <div className="App">
-            <div className="overlay">
-                <div className="rating-grid">
-                    <RatingGrid onRating={onRating}/>
-                </div>
-
-                <div className="llm-text-container">
-                    <div>Why did you choose {rating}?</div>
-                    <textarea className="llm-text-input" type="text" onChange={(event) => setLlmText(event.target.value)}></textarea>
-                    <button className="llm-text-submit" onClick={onTextSubmit}>Submit</button>
-                </div>
-            </div>
-
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                    Save Changes
-                </Button>
-                </Modal.Footer>
-            </Modal>
-            <ThreeCube className="topcanvas" />
+  return (
+    <div className="App">
+      <div className="overlay">
+        <div className="dialogue">
+          <Typewriter text={currentText} delay={50} />
         </div>
-    );
+
+        <motion.div
+          className="rating-grid"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            initial: {
+              opacity: 0,
+              x: -50,
+            },
+            animate: {
+              opacity: 1,
+              x: 0,
+            },
+          }}
+        >
+          <RatingGrid onRating={onRating} />
+        </motion.div>
+
+        <motion.div
+          className="llm-text"
+          initial="initial"
+          animate={rating >= 0 && rating <= 8 ? "animate" : "initial"}
+          transition={{ duration: 0.5 }}
+          variants={{
+            initial: {
+              opacity: 0,
+              x: 50,
+            },
+            animate: {
+              opacity: 1,
+              x: 0,
+            },
+          }}
+        >
+          <LLMTextInput rating={rating} onTextGeneration={onTextGeneration} />
+        </motion.div>
+      </div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <ThreeCube className="topcanvas" />
+    </div>
+  );
 }
 
 export default Scenario1;

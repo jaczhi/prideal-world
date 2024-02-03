@@ -1,14 +1,38 @@
 .rating-grid-container {
+    background-color: #9C89B8;
+    padding: 1rem;
+    border-radius: 15px;
+    display: flex;
+}
 
+.effort-axis {
+    writing-mode: vertical-lr;
+    margin-left: -2px;
+    margin-top: 40px;
+    font-weight: 700;
+}
+
+.intention-axis {
+    font-weight: 700;
 }
 
 .rating-button-group {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .rating-button {
     width: 75px;
     height: 75px;
-    margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 7px;
+    background-color: #F0E6EF;
+    border-width: 0px;
+    transition: transform .2s ease-in-out;
+}
+
+.rating-button:hover {
+    transform: scale(1.1);
+}
+
+.rating-button:not(:last-child) {
+    margin-right: 7px;
 }
