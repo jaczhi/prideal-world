@@ -4,7 +4,7 @@ import PridealApp from "../../components/PridealApp/PridealApp";
 
 function Scenario3() {
   return (
-    <PridealApp />
+    <PridealApp gameDataPath={"gameData/scenario3.json"} modelPath={"models/WorkplaceSceneObject.glb"} initialLightLoc={[0.8, 2.5, 0.0]} />
   );
 }
 
