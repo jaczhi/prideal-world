@@ -1,45 +1,93 @@
 import "./ratinggrid.css";
+import { useState } from "react";
+
+const ratings = ["GG", "GN", "GB", "NG", "NN", "NB", "BG", "BN", "BB"];
+
+function RatingButton({ rating, onRating, selectedButton, setSelectedButton }) {
+  const onRatingSelect = () => {
+    onRating(rating);
+    setSelectedButton(rating);
+  };
+
+  return (
+    <button
+      className={`rating-button ${selectedButton === rating ? "selected" : ""}`}
+      onClick={onRatingSelect}
+    >
+      {ratings[rating]}
+    </button>
+  );
+}
 
 function RatingGrid({ onRating }) {
+  const [selectedButton, setSelectedButton] = useState(-1);
+
   return (
     <div className="rating-grid-container">
       <p className="effort-axis">Effort</p>
       <div>
         <p className="intention-axis">Intention</p>
         <div className="rating-button-group">
-          <button className="rating-button" onClick={() => onRating(0)}>
-            GG
-          </button>
-          <button className="rating-button" onClick={() => onRating(1)}>
-            GN
-          </button>
-          <button className="rating-button" onClick={() => onRating(2)}>
-            GB
-          </button>
+          <RatingButton
+            rating={0}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={1}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={2}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
         </div>
 
         <div className="rating-button-group">
-          <button className="rating-button" onClick={() => onRating(3)}>
-            NG
-          </button>
-          <button className="rating-button" onClick={() => onRating(4)}>
-            NN
-          </button>
-          <button className="rating-button" onClick={() => onRating(5)}>
-            NB
-          </button>
+          <RatingButton
+            rating={3}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={4}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={5}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
         </div>
 
         <div className="rating-button-group">
-          <button className="rating-button" onClick={() => onRating(6)}>
-            BG
-          </button>
-          <button className="rating-button" onClick={() => onRating(7)}>
-            BN
-          </button>
-          <button className="rating-button" onClick={() => onRating(8)}>
-            BB
-          </button>
+          <RatingButton
+            rating={6}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={7}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
+          <RatingButton
+            rating={8}
+            onRating={onRating}
+            selectedButton={selectedButton}
+            setSelectedButton={setSelectedButton}
+          />
         </div>
       </div>
     </div>

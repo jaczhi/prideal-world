@@ -26,7 +26,7 @@
     border-radius: 7px;
     background-color: #F0E6EF;
     border-width: 0px;
-    transition: transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .rating-button:hover {
@@ -35,4 +35,12 @@
 
 .rating-button:not(:last-child) {
     margin-right: 7px;
+}
+
+.selected {
+    transform: scale(1.1);
+    /*border-color: black;
+    border-width: 3px;*/
+    background-color: #F0A6CA;
+    border-radius: 25px;
 }
