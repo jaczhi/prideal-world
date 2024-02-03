@@ -20,7 +20,7 @@ function LLMTextInput({ rating = "Good Good" }) {
 
     return (
         <div className="llm-text-container">
-            <div>Why did you choose {rating}?</div>
+            {rating && <div>Why did you choose {rating}?</div>}
             <textarea className="llm-text-input" placeholder="I chose this because..." type="text" onChange={(event) => setLlmText(event.target.value)}></textarea>
             <button className="llm-text-submit" onClick={onTextSubmit}>Submit</button>
         </div>

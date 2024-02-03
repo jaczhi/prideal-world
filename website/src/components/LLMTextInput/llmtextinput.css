@@ -6,9 +6,8 @@
     flex-direction: column;
     align-items: flex-end;
     background-color: #9C89B8;
-    padding-left: 1rem;
-    padding-right: 1rem;
     border-radius: 15px;
+    align-items: flex-start;
 }
 
 .llm-text-input {
