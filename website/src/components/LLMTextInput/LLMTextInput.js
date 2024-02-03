@@ -10,51 +10,52 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
 
   useEffect(() => {
     switch (rating) {
-        case 0:
-          console.log("Good Good");
-          setRatingText("Good Good");
-          break;
-        case 1:
-          console.log("Good Neutral");
-          setRatingText("Good Neutral");
-          break;
-        case 2:
-          console.log("Good Bad");
-          setRatingText("Good Bad");
-          break;
-        case 3:
-          console.log("Neutral Good");
-          setRatingText("Neutral Good");
-          break;
-        case 4:
-          console.log("Neutral Neutral");
-          setRatingText("Neutral Neutral");
-          break;
-        case 5:
-          console.log("Neutral Bad");
-          setRatingText("Neutral Bad");
-          break;
-        case 6:
-          console.log("Bad Good");
-          setRatingText("Bad Good");
-          break;
-        case 7:
-          console.log("Bad Neutral");
-          setRatingText("Bad Neutral");
-          break;
-        case 8:
-        default: 
-            console.log("Bad Bad");
-            setRatingText("Good Bad");
-            break;
-      }
+      case 0:
+        console.log("Good Effect, Good Intention");
+        setRatingText("Good Effect, Good Intention");
+        break;
+      case 1:
+        console.log("Good Effect, Neutral Intention");
+        setRatingText("Good Effect, Neutral Intention");
+        break;
+      case 2:
+        console.log("Good Effect, Bad Intention");
+        setRatingText("Good Effect, Bad Intention");
+        break;
+      case 3:
+        console.log("Neutral Effect, Good Intention");
+        setRatingText("Neutral Effect, Good Intention");
+        break;
+      case 4:
+        console.log("Neutral Effect, Neutral Intention");
+        setRatingText("Neutral Effect, Neutral Intention");
+        break;
+      case 5:
+        console.log("Neutral Effect, Bad Intention");
+        setRatingText("Neutral Effect, Bad Intention");
+        break;
+      case 6:
+        console.log("Bad Effect, Good Intention");
+        setRatingText("Bad Effect, Good Intention");
+        break;
+      case 7:
+        console.log("Bad Effect, Neutral Intention");
+        setRatingText("Bad Effect, Neutral Intention");
+        break;
+      case 8:
+      default:
+        console.log("Bad Effect, Bad Intention");
+        setRatingText("Bad Effect, Bad Intention");
+        break;
+    }
   }, [rating]);
 
-  const onTextSubmit = () => {
-    let promptString = llmPrompt.replace(/###/, function(match) {
+  const onTextSubmit = (e) => {
+    e.preventDefault();
+    let promptString = llmPrompt.replace(/###/, function (match) {
       return llmText;
     });
-    
+
     console.log(promptString);
 
     isLoading(true);
@@ -75,8 +76,8 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
 
   return (
     <div className="llm-text-container">
-      {<div>Why did you choose {ratingText}?</div>}
-      <div className="llm-input-container">
+      <div className="llm-question">Why did you choose {ratingText}?</div>
+      <form onSubmit={onTextSubmit} className="llm-input-container">
         <input
           className="llm-text-input"
           placeholder="I chose this because..."
@@ -84,15 +85,13 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
           onChange={(event) => setLlmText(event.target.value)}
         ></input>
         {!loading ? (
-          <SendIcon
-            fontSize="large"
-            className="llm-text-submit"
-            onClick={onTextSubmit}
-          />
+          <button type="submit" className="llm-text-submit">
+            <SendIcon fontSize="large" />
+          </button>
         ) : (
-          <CircularProgress color="secondary" />
+          <CircularProgress color="secondary" className="llm-text-send-icon" />
         )}
-      </div>
+      </form>
     </div>
   );
 }

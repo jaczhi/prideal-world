@@ -28,6 +28,8 @@
     width: fit-content;
     margin-top: 5px;
     border-radius: 15px;
+    font-family: 'American Typewriter', serif;
+    font-size: 18px;
 }
 
 .topcanvas {

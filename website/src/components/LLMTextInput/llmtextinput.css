@@ -4,8 +4,12 @@
     align-items: center;
     background-color: #EFC3E6;
     border-radius: 15px;
-    padding-right: 15px;
-    gap: 5px;
+    padding: 15px;
+}
+
+.llm-question {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
 }
 
 .llm-input-container {
@@ -24,6 +28,10 @@
 }
 
 .llm-text-submit {
-    cursor: pointer;
-    margin-left: 5px;
+    background-color: transparent;
+    border-width: 0px;
+}
+
+.llm-text-send-icon {
+    margin-left: 7px;
 }

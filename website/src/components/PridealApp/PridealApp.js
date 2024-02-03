@@ -34,6 +34,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
     if (gameState < 0) return;
     if (gameState >= gameData.length) return;
     if (gameData[gameState].type === "dialog") {
+      setRating(-1); // Reset the rating
       setShowOverlay(false);
       setDialog(
         `${gameData[gameState].actor}: ${gameData[gameState].dialog}`
