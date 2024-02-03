@@ -7,7 +7,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import TestPage from "./pages/TestPage";
+import Scenario1 from "./pages/scenario1/Scenario1";
+import Scenario2 from "./pages/scenario2/Scenario2";
+import Scenario3 from "./pages/scenario3/Scenario3";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +17,16 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/testPage",
-    element: <TestPage />
+    path: "/scenario1",
+    element: <Scenario1 />
+  },
+  {
+    path: "/scenario2",
+    element: <Scenario2 />
+  },
+  {
+    path: "/scenario3",
+    element: <Scenario3 />
   }
 ]);
 
