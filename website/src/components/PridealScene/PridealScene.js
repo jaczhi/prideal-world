@@ -1,16 +1,45 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-function PridealScene({ children }) {
+function PridealScene({ children, initialLightLoc, modelPath, cameraLoc, cameraRotation }) {
   const refContainer = useRef(null);
+  const [camera, setCamera] = useState(null);
+
+  function moveCamera(camera, x, y, z) {
+    if (camera.position.x === x && camera.position.y === y && camera.position.z === z) return;
+    gsap.to(camera.position, {
+      x,
+      y,
+      z,
+      duration: 1.5,
+    });
+  }
+
+  function rotateCamera(camera, x, y, z) {
+    if (camera.rotation.x === x && camera.rotation.y === y && camera.rotation.z === z) return;
+    gsap.to(camera.rotation, {
+      x,
+      y,
+      z,
+      duration: 1.5,
+    });
+  }
+
+  useEffect(() => {
+    if (camera) {
+      moveCamera(camera, cameraLoc[0], cameraLoc[1], cameraLoc[2]);
+      rotateCamera(camera, cameraRotation[0], cameraRotation[1], cameraRotation[2]);
+    }
+  }, [cameraLoc, cameraRotation]);
+
   useEffect(() => {
     // === THREE.JS CODE START ===
     var scene = new THREE.Scene();
     //scene.add(new THREE.AxesHelper(5));
     const light = new THREE.PointLight(0xfffad1, 10);
-    light.position.set(0.8, 1.4, 3.0);
+    light.position.set(initialLightLoc[0], initialLightLoc[1], initialLightLoc[2]);
     scene.add(light);
 
     const ambientLight = new THREE.AmbientLight();
@@ -22,30 +51,8 @@ function PridealScene({ children }) {
       0.1,
       1000
     );
-    camera.position.set(0.8, 1.4, 3.0);
-
-    function moveCamera(x, y, z) {
-      gsap.to(camera.position, {
-        x,
-        y,
-        z,
-        duration: 1.5,
-      });
-    }
-
-    function rotateCamera(x, y, z) {
-      gsap.to(camera.rotation, {
-        x,
-        y,
-        z,
-        duration: 1.5,
-      });
-    }
-
-    window.addEventListener("mouseup", function () {
-      moveCamera(0.8, 1.4, 3.0);
-      rotateCamera(0, 1, 0);
-    });
+    camera.position.set(cameraLoc[0], cameraLoc[1], cameraLoc[2]);
+    camera.rotation.set(cameraRotation[0], cameraRotation[1], cameraRotation[2]);
 
     var renderer = new THREE.WebGLRenderer();
     renderer.shadowMap.enabled = true;
@@ -58,7 +65,7 @@ function PridealScene({ children }) {
     var loader = new GLTFLoader();
     var model = new THREE.Object3D();
     loader.load(
-      "models/SM_Env_Tree_03.glb",
+      modelPath,
       function (gltf) {
         model = gltf.scene;
         scene.add(model);
@@ -121,6 +128,8 @@ function PridealScene({ children }) {
     function render() {
       renderer.render(scene, camera);
     }
+
+    setCamera(camera);
 
     animate();
   }, []);

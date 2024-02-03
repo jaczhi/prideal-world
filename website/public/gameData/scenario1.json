@@ -1,0 +1,24 @@
+[
+	{
+		"type": "dialog",
+		"cameraLoc": [0.0, 1.2, 1.7],
+		"cameraRotation": [0.8,2.5,-0.5],
+        "actor": "Trey",
+		"dialog": "Hi Jared"
+	},
+	{
+		"type": "interact",
+		"cameraLoc": [0.8, 1.2, 3.0],
+		"cameraRotation": [-0.7,0.6,0.5],
+		"correctRatings": [1,3,5,7],
+		"instructions": "Please rate the below dialogue snippet on Trey's intention and the effect on Marie.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they ..."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [0.0, 1.2, 1.7],
+		"cameraRotation": [0.8,2.5,-0.5],
+        "actor": "Marie",
+		"dialog": "Hi Jacob"
+	}
+]

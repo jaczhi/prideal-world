@@ -12,6 +12,15 @@
     height: 100vh;
 }
 
+.dialogFullscreen {
+    user-select: none;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+}
+
 .dialogue {
     padding: 1rem;
     margin: auto;
