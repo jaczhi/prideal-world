@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../scenarios.css";
 import RatingGrid from "../../components/RatingGrid/RatingGrid";
 import LLMTextInput from "../../components/LLMTextInput/LLMTextInput";
+import Typewriter from "../../components/Typewriter/Typewriter";
 
 function Scenario1() {
     const [show, setShow] = useState(false);
@@ -57,7 +58,7 @@ function Scenario1() {
         <div className="App">
             <div className="overlay">
                 <div className="dialogue">
-                    Please rate the below dialogue snippet on [person]'s intention and the effect on [person].
+                    <Typewriter text={"Please rate the below dialogue snippet on [person]'s intention and the effect on [person]."} delay={50}/>
                 </div>
 
                 <div className="rating-grid">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SendIcon from '@mui/icons-material/Send';
 import "./llmtextinput.css";
 
 function LLMTextInput({ rating = "Good Good" }) {
@@ -21,8 +22,8 @@ function LLMTextInput({ rating = "Good Good" }) {
     return (
         <div className="llm-text-container">
             {rating && <div>Why did you choose {rating}?</div>}
-            <textarea className="llm-text-input" placeholder="I chose this because..." type="text" onChange={(event) => setLlmText(event.target.value)}></textarea>
-            <button className="llm-text-submit" onClick={onTextSubmit}>Submit</button>
+            <input className="llm-text-input" placeholder="I chose this because..." type="text" onChange={(event) => setLlmText(event.target.value)}></input>
+            <SendIcon fontSize="large" className="llm-text-submit" />
         </div>
     );
 }
