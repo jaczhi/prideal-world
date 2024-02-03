@@ -11,17 +11,17 @@ function Scenario1() {
   const [show, setShow] = useState(false);
   const [rating, setRating] = useState(-1);
   const [currentText, setCurrentText] = useState(
-    "Please rate the below dialogue snippet on [person]'s intention and the effect on [person]."
+    "Hello hello hello"
   );
 
   const handleClose = () => setShow(false);
 
   const onRating = (score) => {
     setRating(score);
-  }
+  };
 
   const onTextGeneration = (text) => {
-    //setCurrentText(text);
+    setCurrentText(text);
   };
 
   return (
@@ -31,9 +31,25 @@ function Scenario1() {
           <Typewriter text={currentText} delay={50} />
         </div>
 
-        <div className="rating-grid">
+        <motion.div
+          className="rating-grid"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            initial: {
+              opacity: 0,
+              x: -50,
+            },
+            animate: {
+              opacity: 1,
+              x: 0,
+            },
+          }}
+        >
           <RatingGrid onRating={onRating} />
-        </div>
+        </motion.div>
 
         <motion.div
           className="llm-text"
