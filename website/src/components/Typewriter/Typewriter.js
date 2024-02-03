@@ -22,7 +22,7 @@ function Typewriter({ text, delay }) {
     }
   }, [currentIndex, delay, text]);
 
-  return <span>{currentText}</span>;
+  return <span style={{whiteSpace: "pre-line"}}>{currentText}</span>;
 };
 
 export default Typewriter;

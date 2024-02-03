@@ -3,7 +3,7 @@ import SendIcon from "@mui/icons-material/Send";
 import "./llmtextinput.css";
 import { CircularProgress } from "@mui/material";
 
-function LLMTextInput({ rating, onTextGeneration }) {
+function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
   const [llmText, setLlmText] = useState("");
   const [ratingText, setRatingText] = useState("");
   const [loading, isLoading] = useState(false);
@@ -51,7 +51,11 @@ function LLMTextInput({ rating, onTextGeneration }) {
   }, [rating]);
 
   const onTextSubmit = () => {
-    console.log(llmText);
+    let promptString = llmPrompt.replace(/###/, function(match) {
+      return llmText;
+    });
+    
+    console.log(promptString);
 
     isLoading(true);
     fetch("http://127.0.0.1:5000/prompt", {
@@ -59,14 +63,14 @@ function LLMTextInput({ rating, onTextGeneration }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ input: llmText }),
+      body: JSON.stringify({ input: promptString }),
     })
       .then((res) => res.text())
       .then((data) => {
         console.log(data);
         onTextGeneration(data);
         isLoading(false);
-      }); // The capital of Germany is Berlin.
+      });
   };
 
   return (

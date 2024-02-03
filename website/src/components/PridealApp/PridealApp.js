@@ -16,6 +16,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
   const [cameraLoc, setCameraLoc] = useState(initialLightLoc);
   const [cameraRotation, setCameraRotation] = useState([0, 0, 0]);
   const [doneWithInteraction, setDoneWithInteraction] = useState(false);
+  const [llmPrompt, setLlmPrompt] = useState("");
 
   useEffect(() => {
     fetchGameData();
@@ -41,7 +42,8 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
       setShowOverlay(true);
       setCurrentText(gameData[gameState].instructions);
       setDoneWithInteraction(false);
-      /* TODO: use correctRatings and llmPrompt properties in actual game logic */
+      setLlmPrompt(gameData[gameState].llmPrompt);
+      /* TODO: use correctRatings properties in actual game logic */
     }
     setCameraLoc(gameData[gameState].cameraLoc);
     setCameraRotation(gameData[gameState].cameraRotation);
@@ -119,6 +121,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
                 <LLMTextInput
                   rating={rating}
                   onTextGeneration={onTextGeneration}
+                  llmPrompt={llmPrompt}
                 />
               </motion.div>
             </>
