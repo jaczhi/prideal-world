@@ -2,7 +2,7 @@ import * as THREE from 'three';
 
 import { useEffect, useRef } from "react";
 
-function ThreeCube() {
+function ThreeCube({children}) {
   const refContainer = useRef(null);
   useEffect(() => {
     // === THREE.JS CODE START ===
@@ -27,8 +27,7 @@ function ThreeCube() {
     animate();
   }, []);
   return (
-    <div ref={refContainer}></div>
-
+    <div ref={refContainer}>{children}</div>
   );
 }
 
