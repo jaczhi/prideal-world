@@ -4,4 +4,6 @@ html, div, button, input, select, textarea {
 
 body {
     background-color: #B8BEDD;
+    background-image: url(./assets/img/unicorn_bg.png);
+    background-size: cover;
 }
