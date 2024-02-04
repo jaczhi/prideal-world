@@ -123,6 +123,9 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
             </>
           ) : (
             <>
+            <div className="dialogue">
+            <span style={{whiteSpace: "pre-line"}} className="dialogue">{dialog}</span>
+            </div>
               <motion.div
                 className="rating-grid"
                 initial="initial"

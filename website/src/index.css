@@ -1,0 +1,3 @@
+html, div, button, input, select, textarea {
+    cursor:url(./assets/img/pointer.png), auto !important;
+}
