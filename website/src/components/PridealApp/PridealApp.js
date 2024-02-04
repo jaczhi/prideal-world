@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "./PridealApp.css";
+import promptImg from "../../assets/img/prompt.png";
 import RatingGrid from "../RatingGrid/RatingGrid";
 import LLMTextInput from "../LLMTextInput/LLMTextInput";
 import Typewriter from "../Typewriter/Typewriter";
@@ -16,6 +17,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
   const [cameraLoc, setCameraLoc] = useState(initialLightLoc);
   const [cameraRotation, setCameraRotation] = useState([0, 0, 0]);
   const [doneWithInteraction, setDoneWithInteraction] = useState(false);
+  const [loadingResponse, setLoadingResponse] = useState(false);
   const [llmPrompt, setLlmPrompt] = useState("");
 
   useEffect(() => {
@@ -69,7 +71,8 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
     <div className="App">
       {showOverlay ? (
         <div className="overlay">
-          <div className="dialogue">
+          <div className="prompt">
+            {!loadingResponse && <img src={promptImg} width={72} height={115} className="prompt-image"/>}
             <Typewriter text={currentText} delay={5} />
           </div>
 
@@ -78,6 +81,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
               onClick={() => {
                 setGameState(gameState + 1);
               }}
+              className="continue-button"
             >
               Continue
             </button>
@@ -123,6 +127,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
                   rating={rating}
                   onTextGeneration={onTextGeneration}
                   llmPrompt={llmPrompt}
+                  loadingPrompt={setLoadingResponse}
                 />
               </motion.div>
             </>
@@ -136,7 +141,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
           }}
           style={{padding: "2rem"}}
         >
-          <h2 style={{ color: "white", fontFamily: "American Typewriter" }}>{dialog}</h2>
+          <Typewriter className="dialogue" text={dialog} delay={15} />
         </div>
       )}
       <div className="backgroundClick" />

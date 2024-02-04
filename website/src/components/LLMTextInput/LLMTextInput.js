@@ -3,7 +3,7 @@ import SendIcon from "@mui/icons-material/Send";
 import loadingGif from "../../assets/gifs/loading.gif";
 import "./llmtextinput.css";
 
-function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
+function LLMTextInput({ rating, onTextGeneration, llmPrompt, loadingPrompt }) {
   const [llmText, setLlmText] = useState("");
   const [ratingText, setRatingText] = useState("");
   const [loading, isLoading] = useState(false);
@@ -59,6 +59,7 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
     console.log(promptString);
 
     isLoading(true);
+    loadingPrompt(true);
     fetch("http://127.0.0.1:5000/prompt", {
       method: "POST",
       headers: {
@@ -71,6 +72,7 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
         console.log(data);
         onTextGeneration(data);
         isLoading(false);
+        loadingPrompt(false);
       });
   };
 
