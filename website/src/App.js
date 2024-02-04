@@ -6,6 +6,9 @@ import scenario2 from "./assets/img/scenario2.png";
 import scenario3 from "./assets/img/scenario3.png";
 import scenario4 from "./assets/img/scenario4.png";
 
+import unicorn from "./assets/img/unicorn_button.png";
+import unicornHover from "./assets/img/unicorn_button_hover.png";
+
 function App() {
   const navigate = useNavigate();
 
@@ -13,6 +16,15 @@ function App() {
     <div className="container">
       {/* Header */}
       <div className="header">PRideal World</div>
+
+      <div className="image-box">
+        <div class="imageInn">
+          <img src={unicorn} alt="Default Image" width={120} height={257} />
+        </div>
+        <div class="hover-img">
+          <img src={unicornHover} alt="Profile Image" width={120} height={257} />
+        </div>
+      </div>
 
       {/* Grid Container */}
       <div className="grid-container">
