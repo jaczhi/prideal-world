@@ -9,19 +9,6 @@ import scenario4 from "./assets/img/scenario4.png";
 function App() {
   const navigate = useNavigate();
 
-  /*return (
-    <>
-      <Button onClick={() => {navigate("/scenario1")}}>Scenario 1</Button>
-      <br />
-      <Button onClick={() => {navigate("/scenario2")}}>Scenario 2</Button>
-      <br />
-      <Button onClick={() => {navigate("/scenario3")}}>Scenario 3</Button>
-      <br />
-      <Button onClick={() => {navigate("/scenario4")}}>Scenario 4</Button>
-      <br />
-    </>
-  );*/
-
   return (
     <div className="container">
       {/* Header */}

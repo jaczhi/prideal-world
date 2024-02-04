@@ -82,4 +82,9 @@
     border: 8px;
     border-style: ridge;
     border-color: #767676;
+    transition: all .2s ease-in-out;
+}
+
+.continue-button:hover {
+    transform: scale(1.1);
 }

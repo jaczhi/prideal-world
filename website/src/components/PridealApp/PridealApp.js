@@ -63,9 +63,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
 
   const onTextGeneration = (text) => {
     setCurrentText(text);
-    setTimeout(() => {
-      setDoneWithInteraction(true);
-    }, 2000);
+    setDoneWithInteraction(true);
   };
 
   if (gameState < 0) {
