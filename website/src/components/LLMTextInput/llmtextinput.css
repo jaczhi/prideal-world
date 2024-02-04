@@ -5,11 +5,14 @@
     background-color: #EFC3E6;
     border-radius: 15px;
     padding: 15px;
+    font-family: 'American Typewriter', serif;
+    border: 8px;
+    border-style: ridge;
+    border-color: #767676;
 }
 
 .llm-question {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: bold;
+    font-family: 'American Typewriter', serif;
 }
 
 .llm-input-container {
@@ -25,6 +28,7 @@
     background-color: #EFC3E6;
     border-width: 0px; 
     border-radius: 15px;
+    color: #350c7e;
 }
 
 .llm-text-submit {

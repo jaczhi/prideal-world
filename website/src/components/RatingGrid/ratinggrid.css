@@ -3,6 +3,9 @@
     padding: 1rem;
     border-radius: 15px;
     display: flex;
+    border: 8px;
+    border-style: ridge;
+    border-color: #767676;
 }
 
 .effort-axis {
@@ -32,6 +35,12 @@
     font-family: 'American Typewriter', serif;
     font-weight: 600;
     font-size: 25px;
+    border-width: 5px;
+}
+
+.rating-button-correct {
+    border-width: 5px;
+    border-color: green;
 }
 
 .rating-button:hover {
@@ -48,4 +57,22 @@
     border-width: 3px;*/
     background-color: #F0A6CA;
     border-radius: 25px;
+}
+
+.selected-correct-static {
+    transform: scale(1.1);
+    background-color: #1b4a1e;
+    border-radius: 25px;
+    color: white;
+}
+
+.selected-incorrect-static {
+    transform: scale(1.1);
+    background-color: #9e202e;
+    border-radius: 25px;
+    color: white;
+}
+
+.correct-static {
+    background-color: #408544;
 }
