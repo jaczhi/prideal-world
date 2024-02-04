@@ -116,7 +116,7 @@
 		"type": "interact",
 		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,1.2,0.5],
-		"correctRatings": [2,7],
+		"correctRatings": [6,7],
 		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
 		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - It is generally good when parents of LGBTQ children want to show support for their child's sexuality and relationships, such as by asking about their child's partner - However, these questions can become intrusive, especially when the parents' questions concern the sexual nature of their child's relationship - While the parent may ask questions about their LGBTQ child's relationships with good intentions or out of curiosity, when these questions become intrusive, this makes the child feel uncomfortable, as the child most likely does not want to share intimate details of their relationship - Being LGBTQ and out does not mean one is comfortable sharing more details about their relationship - For this reason, although these questions might be asked with good intentions, they could often result in harmful effects on the child as well as the parent and child's relationship. END LIST \n USER: ### \n FEEDBACK: "
 	}

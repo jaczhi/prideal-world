@@ -66,7 +66,7 @@
 		"type": "interact",
 		"cameraLoc": [-0.7, 2.7, -4.5],
 		"cameraRotation": [-0.0,3.4,0.0],
-		"correctRatings": [5,8],
+		"correctRatings": [6,7,8],
 		"instructions": "Please rate the below dialogue snippet on Dr. William's intention and the effect on Jamie.",
 		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - LGBTQ people, especially trans individuals, experience discrimination in healthcare. - Physicians should not question the sexuality and/or the gender identity of the patient when it is not necessary for a diagnosis. END LIST \n USER: ### \n FEEDBACK: "
 	},

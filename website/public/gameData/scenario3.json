@@ -88,7 +88,7 @@
 		"type": "interact",
 		"cameraLoc": [0.9, 2.7, -0.1],
 		"cameraRotation": [-0.0,0.1,0.0],
-		"correctRatings": [2,5,8],
+		"correctRatings": [6,7,8],
 		"instructions": "Please rate the below dialogue snippet on the intention and effect of Jack's remark towards Dylan.",
 		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - When someone introduces themselves with she/they pronouns, although you can use 'she' to refer to this person, by refusing to use 'they,' you are possibly dismissing their gender identity, which is harmful - Respecting and being able to use all the pronouns one goes by is optimal. END LIST \n USER: ### \n FEEDBACK: "
 	}
