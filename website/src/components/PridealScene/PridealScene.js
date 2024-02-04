@@ -38,7 +38,7 @@ function PridealScene({ children, initialLightLoc, modelPath, cameraLoc, cameraR
     // === THREE.JS CODE START ===
     var scene = new THREE.Scene();
     //scene.add(new THREE.AxesHelper(5));
-    const light = new THREE.PointLight(0xfffad1, 10);
+    const light = new THREE.PointLight(0xffd9d1, 10);
     light.position.set(initialLightLoc[0], initialLightLoc[1], initialLightLoc[2]);
     scene.add(light);
 
