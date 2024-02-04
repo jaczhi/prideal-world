@@ -17,4 +17,5 @@
     border-color: #767676;
 
     font-family: 'American Typewriter', serif;
+    user-select: none;
 }

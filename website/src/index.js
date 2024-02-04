@@ -36,7 +36,16 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={router} />);
+if (window.innerWidth < 1000) {
+  root.render(
+  <>
+    <h1>Hi Friend!</h1>
+    <p>Please expand this window or view on a laptop or tablet. Your browser is currently too narrow to enjoy the PRideal World experience.</p>
+  </>);
+}
+else {
+  root.render(<RouterProvider router={router} />);
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
