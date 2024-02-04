@@ -1,3 +1,7 @@
 html, div, button, input, select, textarea {
     cursor:url(./assets/img/pointer.png), auto !important;
 }
+
+body {
+    background-color: #B8BEDD;
+}
