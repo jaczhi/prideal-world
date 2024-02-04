@@ -11,6 +11,7 @@ import scenario4 from "./assets/img/scenario4.png";
 
 import unicorn from "./assets/img/unicorn_button.png";
 import unicornHover from "./assets/img/unicorn_button_hover.png";
+import introunicorn from "./assets/img/prompt.png";
 
 function App() {
   const navigate = useNavigate();
@@ -45,8 +46,20 @@ function App() {
             modalOpen={modalOpen}
             handleClose={() => setModalOpen(false)}
           >
-            <h1>Hello hello</h1>
-            <div>Test</div>
+            <img
+              src={introunicorn}
+              alt="Intro Image"
+              width={80}
+            />
+            <h1>A Message For You &lt;3</h1>
+            <div>
+              <p>Hello There, Human! :3</p>
+              <p>Welcome to PRideal World, my name is Valour the Unicorn (he/they)! I've come from the Ideal World to help you detect biases, 
+                support self-expression, and validate common experiences in the LGBTQ community! Together, we can make an ever-more PRideal World.</p>
+              <p>Of course, I'll be there to help you along the way, and I've got a gift for you: can't let you go in there hornless! &gt;:0 </p>
+              <p>Good Luck brave Human!</p>
+            </div>
+            
           </Modal>
         )}
       </AnimatePresence>
