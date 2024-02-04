@@ -32,14 +32,14 @@
 		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,0.8,0.5],
         "actor": "Mom",
-		"dialog": "It's true, but I wouldn't give up teaching for the world. Speaking of busy, Haley honey, how is your experiment going?"
+		"dialog": "It's true, but I wouldn't give up teaching for the world. Speaking of busy, Haley honey, how was lab?"
 	},
 	{
 		"type": "dialog",
 		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,0.8,0.5],
         "actor": "Haley",
-		"dialog": "Don't even get me started! I tried a new solution today, and all of my cells died… Maybe it'll be better tomorrow."
+		"dialog": "It could've been better, but I'm sure things will turn around tomorrow."
 	},
 	{
 		"type": "dialog",
@@ -54,7 +54,7 @@
 		"cameraRotation": [-0.5,0.8,0.5],
 		"correctRatings": [0,1,3,4],
 		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - The way Mom approaches the conversation treats Haley politely. - It is acceptable to ask about romantic partners without prodding. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - The way Mom approaches the conversation treats Haley politely. - It is acceptable to ask about romantic partners without prodding. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	},
 	{
 		"type": "dialog",
@@ -96,7 +96,7 @@
 		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,0.8,0.5],
         "actor": "Mom",
-		"dialog": "Yeah, I may be old but I'm not heartless, I saw you too being snuggly during movies ;)"
+		"dialog": "Yeah, I may be old but I'm not heartless, I saw you two being snuggly during movies ;)"
 	},
 	{
 		"type": "dialog",
@@ -118,6 +118,6 @@
 		"cameraRotation": [-0.5,1.2,0.5],
 		"correctRatings": [6,7],
 		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - It is generally good when parents of LGBTQ children want to show support for their child's sexuality and relationships, such as by asking about their child's partner - However, these questions can become intrusive, especially when the parents' questions concern the sexual nature of their child's relationship - While the parent may ask questions about their LGBTQ child's relationships with good intentions or out of curiosity, when these questions become intrusive, this makes the child feel uncomfortable, as the child most likely does not want to share intimate details of their relationship - Being LGBTQ and out does not mean one is comfortable sharing more details about their relationship - For this reason, although these questions might be asked with good intentions, they could often result in harmful effects on the child as well as the parent and child's relationship. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - It is generally good when parents of LGBTQ children want to show support for their child's sexuality and relationships, such as by asking about their child's partner - However, these questions can become intrusive, especially when the parents' questions concern the sexual nature of their child's relationship - While the parent may ask questions about their LGBTQ child's relationships with good intentions or out of curiosity, when these questions become intrusive, this makes the child feel uncomfortable, as the child most likely does not want to share intimate details of their relationship - Being LGBTQ and out does not mean one is comfortable sharing more details about their relationship - For this reason, although these questions might be asked with good intentions, they could often result in harmful effects on the child as well as the parent and child's relationship. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	}
 ]

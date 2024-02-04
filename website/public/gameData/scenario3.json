@@ -17,7 +17,7 @@
 		"type": "dialog",
 		"cameraLoc": [1.0, 2.7, -1.9],
 		"cameraRotation": [-0.0,-2.0,0.0],
-        "actor": "You",
+        "actor": "Jack",
 		"dialog": "Oh yes! I go by he/him pronouns. Apparently we're doing this whole “pronouns thing” now, so make sure you do that. Dylan, why don't you start."
 	},
 	{
@@ -26,7 +26,7 @@
 		"cameraRotation": [-0.0,-2.0,0.0],
 		"correctRatings": [7,8],
 		"instructions": "Please rate the below dialogue snippet on the intention and effect of Jack's remark.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - It is becoming more common to introduce oneself with pronouns in the workplace to make the space more inclusive to LGBTQ individuals. - Dismissing the need to introduce yourself with pronouns in the workplace is harmful because gender identity is important for many employees. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - It is becoming more common to introduce oneself with pronouns in the workplace to make the space more inclusive to LGBTQ individuals. - Dismissing the need to introduce yourself with pronouns in the workplace is harmful because gender identity is important for many employees. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	},
 	{
 		"type": "dialog",
@@ -90,6 +90,6 @@
 		"cameraRotation": [-0.0,0.1,0.0],
 		"correctRatings": [6,7,8],
 		"instructions": "Please rate the below dialogue snippet on the intention and effect of Jack's remark towards Dylan.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - When someone introduces themselves with she/they pronouns, although you can use 'she' to refer to this person, by refusing to use 'they,' you are possibly dismissing their gender identity, which is harmful - Respecting and being able to use all the pronouns one goes by is optimal. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - When someone introduces themselves with she/they pronouns, although you can use 'she' to refer to this person, by refusing to use 'they,' you are possibly dismissing their gender identity, which is harmful - Respecting and being able to use all the pronouns one goes by is optimal. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	}
 ]

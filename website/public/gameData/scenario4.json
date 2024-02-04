@@ -68,7 +68,7 @@
 		"cameraRotation": [-0.0,3.4,0.0],
 		"correctRatings": [6,7,8],
 		"instructions": "Please rate the below dialogue snippet on Dr. William's intention and the effect on Jamie.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - LGBTQ people, especially trans individuals, experience discrimination in healthcare. - Physicians should not question the sexuality and/or the gender identity of the patient when it is not necessary for a diagnosis. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - LGBTQ people, especially trans individuals, experience discrimination in healthcare. - Physicians should not question the sexuality and/or the gender identity of the patient when it is not necessary for a diagnosis. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	},
     {
 		"type": "dialog",
@@ -104,6 +104,6 @@
 		"cameraRotation": [-0.0,3.4,0.0],
 		"correctRatings": [6,7],
 		"instructions": "Please rate the below dialogue snippet on Dr. William's intention and the effect on Jamie.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - Physicians should not assume that the patient is on hormonal treatment, even if the patient might be trans. - Making assumptions about the patient's gender and/or sexuality is harmful to the patient, and the patient may be less willing to seek out healthcare consequently. END LIST \n USER: ### \n FEEDBACK: "
+		"llmPrompt": "PROMPT: Grade the user by determining which ideas match those in the solution manual. Return feedback on where the user was correct. Keep feedback short and do not provide a numerical score. START SOLUTION MANUAL - Physicians should not assume that the patient is on hormonal treatment, even if the patient might be trans. - Making assumptions about the patient's gender and/or sexuality is harmful to the patient, and the patient may be less willing to seek out healthcare consequently. END SOLUTION MANUAL \n USER: ### \n FEEDBACK: "
 	}
 ]
