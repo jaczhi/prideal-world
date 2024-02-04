@@ -78,18 +78,17 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
     <div className="llm-text-container">
       <div className="llm-question">Why did you choose {ratingText}?</div>
       <form onSubmit={onTextSubmit} className="llm-input-container">
-        <input
+        <textarea
           className="llm-text-input"
           placeholder="I chose this because..."
-          type="text"
           onChange={(event) => setLlmText(event.target.value)}
-        ></input>
+        ></textarea>
         {!loading ? (
           <button type="submit" className="llm-text-submit">
             <SendIcon fontSize="large" />
           </button>
         ) : (
-          <img src={loadingGif} width={48} height={48} alt="loading..." />
+          <img src={loadingGif} width={90} height={125} alt="loading..." />
         )}
       </form>
     </div>

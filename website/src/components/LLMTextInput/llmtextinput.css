@@ -20,8 +20,8 @@
 
 .llm-text-input {
     padding: 1rem;
-    width: 350px;
-    height: 90px;
+    width: 700px;
+    height: 180px;
     background-color: #EFC3E6;
     border-width: 0px; 
     border-radius: 15px;
@@ -30,6 +30,8 @@
 .llm-text-submit {
     background-color: transparent;
     border-width: 0px;
+    margin-left: 22px;
+    margin-right: 22px;
 }
 
 .llm-text-send-icon {

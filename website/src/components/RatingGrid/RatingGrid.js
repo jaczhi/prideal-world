@@ -39,7 +39,7 @@ function RatingGrid({ onRating }) {
 
   return (
     <div className="rating-grid-container">
-      <p className="effort-axis">Effort</p>
+      <p className="effort-axis">Effect</p>
       <div>
         <p className="intention-axis">Intention</p>
         <div className="rating-button-group">
