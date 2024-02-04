@@ -4,6 +4,8 @@
     z-index: 10;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .dialogFullscreen {
@@ -35,6 +37,11 @@
     font-family: 'American Typewriter', serif;
     font-size: 18px;
     letter-spacing: 1px;
+    max-height: 45%;
+    overflow-y: auto;
+    border: 8px;
+    border-style: ridge;
+    border-color: #767676;
 }
 
 .prompt-image {
@@ -65,11 +72,14 @@
     padding: 1rem;
     border-radius: 15px;
     border-width: 0px;
-    position: relative;
-    top: 25%;
-    left: 50%;
+    position: absolute;
+    top: 90%;
+    left: 85%;
     margin: -50px 0 0 -50px;
     font-family: 'American Typewriter', serif;
     font-size: 18px;
     background-color: #F0E6EF;
+    border: 8px;
+    border-style: ridge;
+    border-color: #767676;
 }
