@@ -134,8 +134,9 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
           onClick={() => {
             setGameState(gameState + 1);
           }}
+          style={{padding: "2rem"}}
         >
-          <h2 style={{ color: "white" }}>{dialog}</h2>
+          <h2 style={{ color: "white", fontFamily: "American Typewriter" }}>{dialog}</h2>
         </div>
       )}
       <div className="backgroundClick" />

@@ -1,5 +1,6 @@
 import "./ratinggrid.css";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ratings = ["GG", "GN", "GB", "NG", "NN", "NB", "BG", "BN", "BB"];
 
@@ -10,12 +11,26 @@ function RatingButton({ rating, onRating, selectedButton, setSelectedButton }) {
   };
 
   return (
-    <button
+    <motion.button
       className={`rating-button ${selectedButton === rating ? "selected" : ""}`}
       onClick={onRatingSelect}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.25, delay: 0.05 * rating, }}
+      variants={{
+        initial: {
+          opacity: 0,
+          x: -25,
+        },
+        animate: {
+          opacity: 1,
+          x: 0,
+        },
+      }}
     >
       {ratings[rating]}
-    </button>
+    </motion.button>
   );
 }
 

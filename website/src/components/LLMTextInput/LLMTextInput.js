@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SendIcon from "@mui/icons-material/Send";
+import loadingGif from "../../assets/gifs/loading.gif";
 import "./llmtextinput.css";
-import { CircularProgress } from "@mui/material";
 
 function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
   const [llmText, setLlmText] = useState("");
@@ -89,7 +89,7 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt }) {
             <SendIcon fontSize="large" />
           </button>
         ) : (
-          <CircularProgress color="secondary" className="llm-text-send-icon" />
+          <img src={loadingGif} width={48} height={48} alt="loading..." />
         )}
       </form>
     </div>
