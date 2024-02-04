@@ -73,6 +73,14 @@ function LLMTextInput({ rating, onTextGeneration, llmPrompt, loadingPrompt }) {
         onTextGeneration(data);
         isLoading(false);
         loadingPrompt(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        onTextGeneration(
+          "We couldn't reach the LLM, but this is what we would have said. Great job!"
+        );
+        isLoading(false);
+        loadingPrompt(false);
       });
   };
 
