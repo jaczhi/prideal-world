@@ -34,6 +34,7 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
     if (gameState < 0) return;
     if (gameState >= gameData.length) return;
     if (gameData[gameState].type === "dialog") {
+      setRating(-1); // Reset the rating
       setShowOverlay(false);
       setDialog(
         `${gameData[gameState].actor}: ${gameData[gameState].dialog}`
@@ -133,8 +134,9 @@ function PridealApp({ gameDataPath, modelPath, initialLightLoc }) {
           onClick={() => {
             setGameState(gameState + 1);
           }}
+          style={{padding: "2rem"}}
         >
-          <h2 style={{ color: "white" }}>{dialog}</h2>
+          <h2 style={{ color: "white", fontFamily: "American Typewriter" }}>{dialog}</h2>
         </div>
       )}
       <div className="backgroundClick" />

@@ -6,6 +6,7 @@
 }
 
 .effort-axis {
+    font-family: 'DM Sans', sans-serif;
     writing-mode: vertical-lr;
     margin-left: -2px;
     margin-top: 40px;
@@ -13,6 +14,7 @@
 }
 
 .intention-axis {
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
 }
 
@@ -26,7 +28,10 @@
     border-radius: 7px;
     background-color: #F0E6EF;
     border-width: 0px;
-    transition: transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    font-family: 'American Typewriter', serif;
+    font-weight: 600;
+    font-size: 25px;
 }
 
 .rating-button:hover {
@@ -35,4 +40,12 @@
 
 .rating-button:not(:last-child) {
     margin-right: 7px;
+}
+
+.selected {
+    transform: scale(1.1);
+    /*border-color: black;
+    border-width: 3px;*/
+    background-color: #F0A6CA;
+    border-radius: 25px;
 }
