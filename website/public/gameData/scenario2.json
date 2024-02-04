@@ -1,31 +1,123 @@
 [
 	{
 		"type": "dialog",
-		"cameraLoc": [0.8, 1.2, -0.5],
+		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,1.2,0.5],
         "actor": "Mom",
-		"dialog": "Test Scene 2"
+		"dialog": "Hey, kids!"
 	},
     {
 		"type": "dialog",
-		"cameraLoc": [-1.0, 1.2, -2.0],
+		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,0.8,0.5],
         "actor": "Haley",
-		"dialog": "Hi"
-	},
-	{
-		"type": "interact",
-		"cameraLoc": [0.8, 1.2, -0.5],
-		"cameraRotation": [-0.5,1.2,0.5],
-		"correctRatings": [1,3,5,7],
-		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they ..."
+		"dialog": "Hi, Mom. How was work?"
 	},
 	{
 		"type": "dialog",
-		"cameraLoc": [0.8, 1.2, -0.5],
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "Oh the usual. Grading papers and trying to calm down angry parents."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,1.2,0.5],
+        "actor": "You",
+		"dialog": "Oh I'm sorry, Mom. Your day sounds so busy all the time."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "It's true, but I wouldn't give up teaching for the world. Speaking of busy, Haley honey, how is your experiment going?"
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Haley",
+		"dialog": "Don't even get me started! I tried a new solution today, and all of my cells died… Maybe it'll be better tomorrow."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "I'm sure it will be, sweetie… Oh Haley, how have you and your partner been lately?"
+	},
+	{
+		"type": "interact",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+		"correctRatings": [0,1,3,4],
+		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - The way Mom approaches the conversation treats Haley politely. - It is acceptable to ask about romantic partners without prodding. END LIST \n USER: ### \n FEEDBACK: "
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.5, -1.5],
+		"cameraRotation": [-0.2,0.5,0.1],
+        "actor": "Haley",
+		"dialog": "Oh Carmen? It's been going great! We'll be celebrating our 3 year anniversary, so I'm heading to her apartment tomorrow."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "Wow! Time flies by so fast. It feels like only yesterday that you brought Carmen over to family dinner and introduced her."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Haley",
+		"dialog": "Yeah, I'm so happy to be with her."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "I'm happy that you're happy, Haley :)"
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Haley",
+		"dialog": "Yeah! I have the keys to her place, so I hope to surprise her with a fancy candlelight dinner. She's so sweet and adorable."
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Mom",
+		"dialog": "Yeah, I may be old but I'm not heartless, I saw you too being snuggly during movies ;)"
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,0.8,0.5],
+        "actor": "Haley",
+		"dialog": "Ack Mom! ...Yeah we like holding hands and generally being physically affectionate. >.<"
+	},
+	{
+		"type": "dialog",
+		"cameraLoc": [-0.9, 1.7, 0.0],
 		"cameraRotation": [-0.5,1.2,0.5],
         "actor": "Haley",
-		"dialog": "Hi Jacob"
+		"dialog": "Oh really? So tell me, how would two girls even have sex? 0_o"
+	},
+	{
+		"type": "interact",
+		"cameraLoc": [-0.9, 1.7, 0.0],
+		"cameraRotation": [-0.5,1.2,0.5],
+		"correctRatings": [2,7],
+		"instructions": "Please rate the below dialogue snippet on Mom's intention and the effect on Haley.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - It is generally good when parents of LGBTQ children want to show support for their child's sexuality and relationships, such as by asking about their child's partner - However, these questions can become intrusive, especially when the parents' questions concern the sexual nature of their child's relationship - While the parent may ask questions about their LGBTQ child's relationships with good intentions or out of curiosity, when these questions become intrusive, this makes the child feel uncomfortable, as the child most likely does not want to share intimate details of their relationship - Being LGBTQ and out does not mean one is comfortable sharing more details about their relationship - For this reason, although these questions might be asked with good intentions, they could often result in harmful effects on the child as well as the parent and child's relationship. END LIST \n USER: ### \n FEEDBACK: "
 	}
 ]

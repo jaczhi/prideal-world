@@ -1,24 +1,109 @@
 [
 	{
 		"type": "dialog",
-		"cameraLoc": [1.7, 2.7, 0.0],
-		"cameraRotation": [-0.0,0.4,0.0],
-        "actor": "Trey",
-		"dialog": "Hi this is scene 4"
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "Hi Jamie. Thank you for your patience. I'm Dr. Williams and I'll be helping you today. Before we begin, do you mind the presence of my mentee? She's a student volunteer at the hospital who is shadowing me today."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Jamie",
+		"dialog": "Of course! I don't mind at all."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -2.5],
+		"cameraRotation": [-0.0,-0.8,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "Thank you. So, according to your chart here, you've been experiencing frequent exhaustion and dizziness?"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Jamie",
+		"dialog": "Yes. I haven't been as productive at work because of these things. It's very frustrating. :("
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "I understand, Jamie. Perhaps we can run some blood tests first, if that is okay with you. It's to see if anything seems amiss."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -3.5],
+		"cameraRotation": [-0.0,2.8,0.0],
+        "actor": "Jamie",
+		"dialog": "That sounds wonderful. Thank you so much!"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "Of course. Before we do so, I happened to notice that you selected 'male' on the form. Would that be incorrect?"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Jamie",
+		"dialog": "No, it's correct. I identify as a man."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -2.5],
+		"cameraRotation": [-0.0,-0.8,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "Oh I see. I'm sorry, I must've been mistaken then."
 	},
 	{
 		"type": "interact",
-		"cameraLoc": [0.5, 2.7, -2.0],
-		"cameraRotation": [-0.0,-0.8,0.0],
-		"correctRatings": [1,3,5,7],
-		"instructions": "Please rate the below dialogue snippet on Trey's intention and the effect on Marie.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they ..."
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+		"correctRatings": [5,8],
+		"instructions": "Please rate the below dialogue snippet on Dr. William's intention and the effect on Jamie.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - LGBTQ people, especially trans individuals, experience discrimination in healthcare. - Physicians should not question the sexuality and/or the gender identity of the patient when it is not necessary for a diagnosis. END LIST \n USER: ### \n FEEDBACK: "
 	},
-	{
+    {
 		"type": "dialog",
-		"cameraLoc": [1.7, 2.7, 0.0],
-		"cameraRotation": [-0.0,0.4,0.0],
-        "actor": "Marie",
-		"dialog": "Hi Jacob"
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Jamie",
+		"dialog": "Okay..."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "Are you on any hormonal treatments? Like testosterone injections?"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+        "actor": "Jamie",
+		"dialog": "No, I am not. I indicated I wasn't on any treatment in the patient form."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [-0.7, 2.7, -2.5],
+		"cameraRotation": [-0.0,-0.8,0.0],
+        "actor": "Dr. Williams",
+		"dialog": "I understand. I just wanted to make sure."
+	},
+    {
+		"type": "interact",
+		"cameraLoc": [-0.7, 2.7, -4.5],
+		"cameraRotation": [-0.0,3.4,0.0],
+		"correctRatings": [6,7],
+		"instructions": "Please rate the below dialogue snippet on Dr. William's intention and the effect on Jamie.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - Physicians should not assume that the patient is on hormonal treatment, even if the patient might be trans. - Making assumptions about the patient's gender and/or sexuality is harmful to the patient, and the patient may be less willing to seek out healthcare consequently. END LIST \n USER: ### \n FEEDBACK: "
 	}
 ]
