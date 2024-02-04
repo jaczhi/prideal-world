@@ -16,8 +16,9 @@ function RatingButton({ rating, onRating, selectedButton, setSelectedButton }) {
       onClick={onRatingSelect}
       initial="initial"
       whileInView="animate"
+      whileTap={{ scale: 0.9 }}
       viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.25, delay: 0.05 * rating, }}
+      transition={{ duration: 0.15, delay: 0.05 * rating, }}
       variants={{
         initial: {
           opacity: 0,
