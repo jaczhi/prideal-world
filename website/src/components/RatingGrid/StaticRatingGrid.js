@@ -41,9 +41,9 @@ function StaticRatingButton({ rating, selected, correct }) {
 function StaticRatingGrid({ rating, correctArray }) {
   return (
     <div className="rating-grid-container">
-      <p className="effort-axis">Effect</p>
+      <p className="effort-axis">Effect &#10230;</p>
       <div>
-        <p className="intention-axis">Intention</p>
+        <p className="intention-axis">Intention &#10230;</p>
         <div className="rating-button-group">
           <StaticRatingButton
             rating={0}
