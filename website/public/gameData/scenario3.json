@@ -1,24 +1,95 @@
 [
+    {
+		"type": "dialog",
+		"cameraLoc": [1.0, 2.7, -1.9],
+		"cameraRotation": [-0.0,-2.0,0.0],
+        "actor": "Jack",
+		"dialog": "Hi everyone. As you probably know, I'm Jack, and I'm leading the department meeting this week. We'll be presenting our performance over the last three months to the higher ups next week, so let's just make sure everyone knows what they're saying. "
+	},
 	{
 		"type": "dialog",
-		"cameraLoc": [1.7, 2.7, 0.0],
-		"cameraRotation": [-0.0,0.4,0.0],
-        "actor": "Trey",
-		"dialog": "Hi this is scene 3"
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "You",
+		"dialog": "Hey, Jack. Don't forget to mention your pronouns when you introduce yourself."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [1.0, 2.7, -1.9],
+		"cameraRotation": [-0.0,-2.0,0.0],
+        "actor": "You",
+		"dialog": "Oh yes! I go by he/him pronouns. Apparently we're doing this whole “pronouns thing” now, so make sure you do that. Dylan, why don't you start."
 	},
 	{
 		"type": "interact",
-		"cameraLoc": [0.5, 2.7, -2.0],
-		"cameraRotation": [-0.0,-0.8,0.0],
-		"correctRatings": [1,3,5,7],
-		"instructions": "Please rate the below dialogue snippet on Trey's intention and the effect on Marie.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they ..."
+		"cameraLoc": [1.0, 2.7, -1.9],
+		"cameraRotation": [-0.0,-2.0,0.0],
+		"correctRatings": [7,8],
+		"instructions": "Please rate the below dialogue snippet on the intention and effect of Jack's remark.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST  - It is becoming more common to introduce oneself with pronouns in the workplace to make the space more inclusive to LGBTQ individuals. - Dismissing the need to introduce yourself with pronouns in the workplace is harmful because gender identity is important for many employees. END LIST \n USER: ### \n FEEDBACK: "
 	},
 	{
 		"type": "dialog",
-		"cameraLoc": [1.7, 2.7, 0.0],
-		"cameraRotation": [-0.0,0.4,0.0],
-        "actor": "Marie",
-		"dialog": "Hi Jacob"
+		"cameraLoc": [1.0, 2.7, -0.5],
+		"cameraRotation": [-0.0,0.5,0.0],
+        "actor": "Dylan",
+		"dialog": "Hello everyone. I'm Dylan, and I go by she/they. I'll be presenting our original goals from the start of the quarter."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "Jack",
+		"dialog": "Woah Dylan. You go by she/they? How come we didn't know? :0"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "Dylan",
+		"dialog": "Oh, well I didn't know when would have been a good time to bring it up before. But now that everyone is indicating their pronouns, I thought now would be okay."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [1.0, 2.7, -0.5],
+		"cameraRotation": [-0.0,0.5,0.0],
+        "actor": "You",
+		"dialog": "Well thank you for letting us know, Dylan. We'll be sure to keep that in mind."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "Dylan",
+		"dialog": "Thank you. :)"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "Jack",
+		"dialog": "Because you go by they/she pronouns, that means we can continue referring to you as 'she' right?"
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+        "actor": "Dylan",
+		"dialog": "Yes, but I'm fine with 'they' as well."
+	},
+    {
+		"type": "dialog",
+		"cameraLoc": [1.0, 2.7, -1.9],
+		"cameraRotation": [-0.0,-2.0,0.0],
+        "actor": "Jack",
+		"dialog": "I'm not really used to using 'they,' so I think I'll go with 'she,' if that's alright."
+	},
+    {
+		"type": "interact",
+		"cameraLoc": [0.9, 2.7, -0.1],
+		"cameraRotation": [-0.0,0.1,0.0],
+		"correctRatings": [2,5,8],
+		"instructions": "Please rate the below dialogue snippet on the intention and effect of Jack's remark towards Dylan.",
+		"llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - When someone introduces themselves with she/they pronouns, although you can use 'she' to refer to this person, by refusing to use 'they,' you are possibly dismissing their gender identity, which is harmful - Respecting and being able to use all the pronouns one goes by is optimal. END LIST \n USER: ### \n FEEDBACK: "
 	}
 ]

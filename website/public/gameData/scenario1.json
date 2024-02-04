@@ -45,16 +45,16 @@
 		"type": "dialog",
         "cameraLoc": [0.3, 0.7, 1],
 		"cameraRotation": [-0.2,0,-0.1],
-        "actor": "You",
+        "actor": "Marie",
 		"dialog": "I've never had a gay best friend before. Isn't he so stylish, roomie?"
 	},
 	{
 		"type": "interact",
 		"cameraLoc": [0.8, 1.2, 3.0],
 		"cameraRotation": [-0.7,0.6,0.5],
-		"correctRatings": [1,3,5,7],
+		"correctRatings": [1,2,4],
 		"instructions": "Please rate the below dialogue snippet on Marie's intention and the effect on Trey.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to these ideal responses here: START LIST - The tendency to label a male “gay best friend” is often rooted in distrust in men, leading to basing one's sense of safety in someone's sexuality - Whether it's building trust or labeling personality traits, resulting friendships may feel dependent on or reduced to to one's sexuality. - Through depictions of such tropes in media, having a “gay best friend” has become a social status, which diminishes their autonomy. - For this reason, this often is said in good intention but unfortunately results in neutral or harmful effects. END LIST Return feedback on what user was correct or empathetic on and provide insight on what they missed in a gentle, concise manner. \n USER: ### \n FEEDBACK: "
+        "llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - The tendency to label a male “gay best friend” is often rooted in distrust in men, leading to basing one's sense of safety in someone's sexuality - Whether it's building trust or labeling personality traits, resulting friendships may feel dependent on or reduced to to one's sexuality. - Through depictions of such tropes in media, having a “gay best friend” has become a social status, which diminishes their autonomy. - For this reason, this often is said in good intention but unfortunately results in neutral or harmful effects. END LIST \n USER: ### \n FEEDBACK: "
 	},
 	{
 		"type": "dialog",
@@ -95,8 +95,8 @@
 		"type": "interact",
 		"cameraLoc": [0.8, 1.2, 3.0],
 		"cameraRotation": [-0.7,0.6,0.5],
-		"correctRatings": [1,3,5,7],
+		"correctRatings": [1,2,4],
 		"instructions": "Please rate the below dialogue snippet on Marie's intention and the effect on Trey.",
-		"llmPrompt": "PROMPT: Grade user by scoring how close they are to these ideal responses here: START LIST - The tendency to label a male “gay best friend” is often rooted in distrust in men, leading to basing one's sense of safety in someone's sexuality - Whether it's building trust or labeling personality traits, resulting friendships may feel dependent on or reduced to to one's sexuality. - Through depictions of such tropes in media, having a “gay best friend” has become a social status, which diminishes their autonomy. - For this reason, this often is said in good intention but unfortunately results in neutral or harmful effects. END LIST Return feedback on what user was correct or empathetic on and provide insight on what they missed in a gentle, concise manner. \n USER: ### \n FEEDBACK: "
+        "llmPrompt": "PROMPT: Grade user by scoring how close they are to at least one of these ideal responses here. Return feedback on what user was correct or empathetic on and provide brief insight on what they missed in a gentle, concise manner. Do not provide a numerical score. START LIST - The tendency to label a male “gay best friend” is often rooted in distrust in men, leading to basing one's sense of safety in someone's sexuality - Whether it's building trust or labeling personality traits, resulting friendships may feel dependent on or reduced to to one's sexuality. - Through depictions of such tropes in media, having a “gay best friend” has become a social status, which diminishes their autonomy. - For this reason, this often is said in good intention but unfortunately results in neutral or harmful effects. END LIST \n USER: ### \n FEEDBACK: "
 	}
 ]
